@@ -1,6 +1,7 @@
 :root {
     --body-bg-color: #FAF7FD;
     --purple: #BB99DD;
+    --shadow: hsla(0, 0%, 0%, 0.25);
   }
 
 * {
@@ -8,9 +9,78 @@
     padding: 0;
 }
 
-body {
-   font-family: 'Poppins', sans-serif; 
+img {
+    max-width: 100%;
+    height: auto;
 }
-  
+
+a {
+    text-decoration: none;
+    color: var(--purple);
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 16px;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--body-bg-color);
+    color: var(--purple);
+}
+
+main {
+    width: 375px;
+    height: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile, .link {
+    width: 100%;
+    height: 33%;
+}
+
+.profile__img img{
+    border: 2px solid var(--purple);
+    padding: 0.3rem;
+    border-radius: 50%;
+}
+
+.profile__name {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.link__button {
+    width: 80%;
+    height: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: var(--body-bg-color);
+    border: 2px solid var(--purple);
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 var(--shadow);
+    margin-bottom: 1rem;
+}
+
+.social {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    height: 24px;
+    margin-top: 2rem;
+}
+
+.social img:hover {
+    cursor: pointer;
+}
 
   
